@@ -1,4 +1,4 @@
-package com.thinkconstructive_rest_demo.model;
+package com.springboot_rest_demo.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

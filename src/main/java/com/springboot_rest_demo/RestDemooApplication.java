@@ -1,4 +1,4 @@
-package com.thinkconstructive_rest_demo;
+package com.springboot_rest_demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

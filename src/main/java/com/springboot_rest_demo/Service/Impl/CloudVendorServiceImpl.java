@@ -1,12 +1,12 @@
-package com.thinkconstructive_rest_demo.Service.Impl;
+package com.springboot_rest_demo.Service.Impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.thinkconstructive_rest_demo.Repository.CloudVendorRepository;
-import com.thinkconstructive_rest_demo.Service.CloudVendorService;
-import com.thinkconstructive_rest_demo.model.CloudVendor;
+import com.springboot_rest_demo.Repository.CloudVendorRepository;
+import com.springboot_rest_demo.Service.CloudVendorService;
+import com.springboot_rest_demo.model.CloudVendor;
 
 @Service
 public class CloudVendorServiceImpl implements CloudVendorService {

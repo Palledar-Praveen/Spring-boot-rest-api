@@ -1,8 +1,8 @@
-package com.thinkconstructive_rest_demo.Service;
+package com.springboot_rest_demo.Service;
 
 import java.util.List;
 
-import com.thinkconstructive_rest_demo.model.CloudVendor;
+import com.springboot_rest_demo.model.CloudVendor;
 
 public interface CloudVendorService {
 

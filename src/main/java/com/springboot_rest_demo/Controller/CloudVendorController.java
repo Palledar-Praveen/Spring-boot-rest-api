@@ -1,4 +1,4 @@
-package com.thinkconstructive_rest_demo.Controller;
+package com.springboot_rest_demo.Controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.thinkconstructive_rest_demo.Service.CloudVendorService;
-import com.thinkconstructive_rest_demo.model.CloudVendor;
+import com.springboot_rest_demo.Service.CloudVendorService;
+import com.springboot_rest_demo.model.CloudVendor;
 
 @RestController
 @RequestMapping("/cloudvendor")
