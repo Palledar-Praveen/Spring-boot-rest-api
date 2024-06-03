@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.springboot_rest_demo.Repository.CloudVendorRepository;
 import com.springboot_rest_demo.Service.CloudVendorService;
+import com.springboot_rest_demo.exception.CloudVendorNotFoundException;
 import com.springboot_rest_demo.model.CloudVendor;
 
 @Service
@@ -38,6 +39,8 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 
 	@Override
 	public CloudVendor getCloudVendor(String cloudVendorId) {
+		if(cloudVendorRepository.findById(cloudVendorId).isEmpty())
+			throw new CloudVendorNotFoundException("Requested CloudVendor does not exist");
 		return cloudVendorRepository.findById(cloudVendorId).get();   
 		//return null;
 	}
