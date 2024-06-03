@@ -2,6 +2,8 @@ package com.springboot_rest_demo.Controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot_rest_demo.Service.CloudVendorService;
 import com.springboot_rest_demo.model.CloudVendor;
+import com.springboot_rest_demo.response.ResponseHandler;
 
 @RestController
 @RequestMapping("/cloudvendor")
@@ -27,8 +30,11 @@ public class CloudVendorController {
 
 	// Read Specific Vendor id details Present in DB
 	@GetMapping("{vendorId}")
-	public CloudVendor getCloudVendorDetails(@PathVariable ("vendorId") String vendorId) { 
-		return cloudVendorService.getCloudVendor(vendorId);
+	public ResponseEntity<Object> getCloudVendorDetails(@PathVariable ("vendorId") String vendorId) { 
+		
+		return ResponseHandler.responseBuilder("Requested CloudVendor details are given here", 
+											HttpStatus.OK, cloudVendorService.getCloudVendor(vendorId));
+		//return cloudVendorService.getCloudVendor(vendorId);
 	
 	};
 
